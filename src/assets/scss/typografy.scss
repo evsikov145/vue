@@ -1,0 +1,16 @@
+@import "variable";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.btn {
+  border-radius: $radius;
+}
