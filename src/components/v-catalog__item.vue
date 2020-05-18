@@ -7,7 +7,7 @@
         <p class="v-catalog__text">Category: {{product_data.category}}</p>
         <button
                 class="v-catalog__btn btn"
-                @click="sendDataToParent"
+                @click="addToCart"
         >Add to cart</button>
     </div>
 </template>
@@ -24,8 +24,8 @@
             }
         },
         methods: {
-            sendDataToParent(){
-                this.$emit('sendArticle', this.product_data.article)
+            addToCart(){
+                this.$emit('addToCart', this.product_data);
             }
         }
     }

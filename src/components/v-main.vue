@@ -1,7 +1,10 @@
 <template>
     <section class="v-main">
         <vCatalog/>
-        <vCart/>
+        <vCart
+            v-if="CART.length"
+            :cart_data="CART"
+        />
     </section>
 </template>
 
@@ -9,6 +12,7 @@
 
     import vCatalog from './v-catalog'
     import vCart from './v-cart'
+    import {mapGetters} from 'vuex'
     export default {
         name: "v-main",
         components: {
@@ -21,7 +25,11 @@
                 title: "Секция Main"
             }
         },
-        computed: {}, //вычисляемые свойства
+        computed: {
+            ...mapGetters([
+                'CART'
+            ])
+        }, //вычисляемые свойства
         methods: {},
         watch: {}, //отлавливание изменений
         mounted() {}, // когда компонент полностью загрузится

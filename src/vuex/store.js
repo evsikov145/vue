@@ -1,16 +1,19 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import actions from './actions/api-requests'
+import actionsList from './actions/actions'
+import actionsApi from './actions/api-requests'
 import mutations from "./mutations/mutations"
 import getters from "./getters/getters";
 
+const actions = {...actionsApi, ...actionsList};
 
 Vue.use(Vuex);
 
 let store = new Vuex.Store({
   state: {
-    products: []
+    products: [],
+    cart: []
   },
   mutations,
   actions,
