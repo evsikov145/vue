@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 import vCatalog from '../components/Catalog/v-catalog'
 import vCart from '../components/Cart/v-cart'
-import vFeature from '../components/v-feature'
+import vFeature from '../components/Feature/v-feature'
 
 
 Vue.use(VueRouter);

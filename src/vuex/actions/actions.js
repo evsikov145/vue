@@ -11,4 +11,5 @@ export  default {
     DECREMENT_CART_ITEM({commit}, index){
         commit('DECREMENT_ITEM', index)
     }
+
 }

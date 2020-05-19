@@ -48,5 +48,35 @@
       "available": true,
       "category": "Женские"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Victor"
+    },
+    {
+      "id": 2,
+      "name": "Victor"
+    },
+    {
+      "id": 3,
+      "name": "Victor"
+    },
+    {
+      "id": 4,
+      "name": "Victor"
+    },
+    {
+      "id": 5,
+      "name": "Victor"
+    },
+    {
+      "id": 6,
+      "name": "Victor"
+    },
+    {
+      "id": 7,
+      "name": "Victor"
+    }
   ]
 }
