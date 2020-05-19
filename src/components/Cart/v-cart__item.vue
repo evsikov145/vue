@@ -1,6 +1,6 @@
 <template>
     <div class="v-cart__item">
-        <img class="v-cart__img" :src="require('../assets/img/'+ cart_item_data.image)" alt="">
+        <img class="v-cart__img" :src="require('../../assets/img/'+ cart_item_data.image)" alt="">
         <div class="v-cart__info">
             <p>{{cart_item_data.name}}</p>
             <p>{{cart_item_data.price}}</p>
@@ -8,7 +8,17 @@
         </div>
         <div class="v-cart__quantity">
             <p>Quantity:</p>
-            {{cart_item_data.quantity}}
+            <div>
+                <button
+                        @click="decrementItem"
+                        class="btn quantity__btn"
+                >-</button>
+                {{cart_item_data.quantity}}
+                <button
+                        @click="incrementItem"
+                        class=" btn quantity__btn"
+                >+</button>
+            </div>
         </div>
         <button
                 class="btn"
@@ -18,6 +28,8 @@
 </template>
 
 <script>
+
+
     export default {
         name: "v-cart__item",
         props: {
@@ -29,12 +41,16 @@
             }
         },
         methods: {
+
             deleteFromCart(){
                 this.$emit('deleteFromCart');
+            },
+            incrementItem(){
+                this.$emit('incrementItem');
+            },
+            decrementItem(){
+                this.$emit('decrementItem');
             }
-        },
-        mounted() {
-            this.$set(this.cart_item_data, 'quantity', 1);
         }
     }
 </script>
@@ -50,5 +66,10 @@
     }
     .v-cart__img {
         max-width: 70px;
+    }
+    .quantity__btn {
+        width: 26px;
+        padding: $padding/2!important;
+        border-radius: 50%!important;
     }
 </style>

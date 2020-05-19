@@ -21,5 +21,14 @@ export default {
     },
     REMOVE_FROM_CART: (state, index) => {
         state.cart.splice(index, 1);
+    },
+    INCREMENT_ITEM: (state, index) => {
+        state.cart[index].quantity++;
+    },
+    DECREMENT_ITEM: (state, index) => {
+        if(state.cart[index].quantity > 1){
+            state.cart[index].quantity--;
+        }
+
     }
 }

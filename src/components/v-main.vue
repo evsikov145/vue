@@ -1,35 +1,23 @@
 <template>
     <section class="v-main">
-        <vCatalog/>
-        <vCart
-            v-if="CART.length"
-            :cart_data="CART"
-        />
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
     </section>
 </template>
 
 <script>
 
-    import vCatalog from './v-catalog'
-    import vCart from './v-cart'
-    import {mapGetters} from 'vuex'
     export default {
         name: "v-main",
-        components: {
-            vCatalog,
-            vCart
-        },
+        components: {},
         props: {},
         data(){
             return {
                 title: "Секция Main"
             }
         },
-        computed: {
-            ...mapGetters([
-                'CART'
-            ])
-        }, //вычисляемые свойства
+        computed: {}, //вычисляемые свойства
         methods: {},
         watch: {}, //отлавливание изменений
         mounted() {}, // когда компонент полностью загрузится

@@ -1,6 +1,21 @@
 <template>
     <section class="v-catalog">
         <h2>{{title}}</h2>
+        <router-link
+            :to="{name: 'Cart', params: {cart_data:CART} }"
+        >
+            <div class="v-catalog__link-cart">
+                Cart : {{CART.length}}
+            </div>
+        </router-link>
+        <router-link
+                :to="{name: 'Feature' }"
+        >
+            <div class="v-catalog__link-feature">
+                Feature
+            </div>
+        </router-link>
+
         <div class="v-catalog__list">
             <vCatalogItem
                 v-for="product in PRODUCTS"
@@ -28,7 +43,8 @@
         },
         computed: {
             ...mapGetters([
-                'PRODUCTS'
+                'PRODUCTS',
+                'CART'
             ])
         },
         methods: {
@@ -53,6 +69,7 @@
 
 <style lang="scss">
     .v-catalog {
+        position: relative;
     text-align: center;
         &__list {
             display: flex;
@@ -60,6 +77,22 @@
             justify-content: space-between;
             align-items: center;
         }
+    }
+    .v-catalog__link-cart {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: $padding*2;
+        border: 1px solid $color-box;
+        cursor: pointer;
+    }
+    .v-catalog__link-feature {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: $padding*2;
+        border: 1px solid $color-box;
+        cursor: pointer;
     }
 
 </style>

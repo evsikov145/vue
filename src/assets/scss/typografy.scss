@@ -12,5 +12,11 @@ h2 {
 }
 
 .btn {
+  outline: none;
+  border: none ;
   border-radius: $radius;
+  cursor: pointer;
+  padding: $padding $padding*2;
+  background: #26ae68;
+  color: white;
 }

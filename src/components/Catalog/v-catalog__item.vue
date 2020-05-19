@@ -1,6 +1,6 @@
 <template>
     <div class="v-catalog__item">
-        <img class="v-catalog__img" :src="require('../assets/img/'+ product_data.image)" alt="">
+        <img class="v-catalog__img" :src="require('../../assets/img/'+ product_data.image)" alt="">
         <p class="v-catalog__text">Name: {{product_data.name}}</p>
         <p class="v-catalog__text">Price: {{product_data.price}} RUB</p>
         <p class="v-catalog__text">Article: {{product_data.article}}</p>
@@ -27,6 +27,9 @@
             addToCart(){
                 this.$emit('addToCart', this.product_data);
             }
+        },
+        mounted() {
+            this.$set(this.product_data, 'quantity', 1);
         }
     }
 </script>
