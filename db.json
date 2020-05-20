@@ -52,31 +52,150 @@
   "users": [
     {
       "id": 1,
-      "name": "Victor"
+      "name": "Victor",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
     },
     {
       "id": 2,
-      "name": "Victor"
+      "name": "Victor",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
     },
     {
       "id": 3,
-      "name": "Victor"
+      "name": "Victor",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
     },
     {
       "id": 4,
-      "name": "Victor"
+      "name": "Victor",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
     },
     {
       "id": 5,
-      "name": "Victor"
+      "name": "Victor",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
     },
     {
       "id": 6,
-      "name": "Victor"
+      "name": "Slava",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
     },
     {
       "id": 7,
-      "name": "Victor"
+      "name": "Slava",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 8,
+      "name": "Slava",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 9,
+      "name": "Slava",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 10,
+      "name": "Slava",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 11,
+      "name": "Oleg",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 12,
+      "name": "Oleg",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 13,
+      "name": "Oleg",
+      "points_earned": 2,
+      "points_spent": 45,
+      "registration_date": "2013-01-03"
+    },
+    {
+      "id": 14,
+      "name": "Oleg",
+      "points_earned": 1,
+      "points_spent": 4556,
+      "registration_date": "2012-01-03"
+    },
+    {
+      "id": 15,
+      "name": "Oleg",
+      "points_earned": 862,
+      "points_spent": 43,
+      "registration_date": "2015-01-03"
+    },
+    {
+      "id": 16,
+      "name": "Roman",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 17,
+      "name": "Roman",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 18,
+      "name": "Roman",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 19,
+      "name": "Roman",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 20,
+      "name": "Roman",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
+    },
+    {
+      "id": 21,
+      "name": "Dimon",
+      "points_earned": 862,
+      "points_spent": 4556,
+      "registration_date": "2014-01-03"
     }
   ]
 }
