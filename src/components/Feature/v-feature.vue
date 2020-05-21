@@ -8,11 +8,13 @@
             :options="optionsSelect"
             @select="optionsSelectResult"
             :selected="selected"
+            :isExpanded="true"
         />
-        <p>Selected options goes here: {{selected}}</p>
+        <p class="v-select__text">Selected options goes here: {{selected}}</p>
         <vTable
                 :users_data="USERS"
         />
+        <vShow/>
     </section>
 </template>
 
@@ -20,11 +22,13 @@
     import {mapActions, mapGetters} from 'vuex'
     import vTable from './v-table'
     import vSelect from './v-select'
+    import vShow from './v-show'
     export default {
         name: "feature",
         components: {
             vSelect,
-            vTable
+            vTable,
+            vShow
         },
         data(){
             return {
@@ -46,7 +50,9 @@
                 this.selected = option.name;
             },
             ...mapActions([
-                'GET_USERS_FROM_API'
+                'GET_USERS_FROM_API',
+                'SET_MOBILE',
+                'SET_DESKTOP'
             ])
         },
         computed: {
@@ -56,6 +62,14 @@
         },
         mounted() {
             this.GET_USERS_FROM_API();
+            let ctx = this;
+            window.addEventListener('resize', function () {
+                if(window.innerWidth > 767) {
+                    ctx.SET_DESKTOP();
+                }else{
+                    ctx.SET_MOBILE();
+                }
+            })
         }
     }
 </script>
@@ -68,6 +82,9 @@
     .input {
         padding: $padding*2;
         border: 1px dotted #26ae68;
+    }
+    .v-select__text {
+        margin-bottom: 100px;
     }
 
 </style>

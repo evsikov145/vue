@@ -4,6 +4,7 @@ import router from './router/router'
 import store from './vuex/store'
 import './assets/scss/variable.scss'
 import './assets/scss/typografy.scss'
+import 'material-design-icons-iconfont'
 
 Vue.config.productionTip = false
 

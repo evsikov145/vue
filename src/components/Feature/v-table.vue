@@ -85,7 +85,7 @@
 <style lang="scss">
     .v-table {
         max-width: 900px;
-        margin: 0 auto;
+        margin: 0 auto 40px;
     }
     .v-table__header {
         display: flex;

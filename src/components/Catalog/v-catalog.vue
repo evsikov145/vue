@@ -24,21 +24,30 @@
                 @addToCart="addToCart"
             />
         </div>
+        <v-notification
+            :messages="messages"
+            leftButtons=""
+            rightButtons=""
+            :timeout="5000"
+        />
     </section>
 </template>
 
 <script>
+    import vNotification from '../notification/v-notification'
     import vCatalogItem from './v-catalog__item'
     import {mapActions, mapGetters} from 'vuex'
+
     export default {
         name: "v-catalog",
         components: {
-            vCatalogItem
+            vCatalogItem,
+            vNotification
         },
         data(){
             return {
-                title: "Catalog"
-
+                title: "Catalog",
+                messages: []
             }
         },
         computed: {
@@ -49,7 +58,13 @@
         },
         methods: {
             addToCart(data){
-                this.ADD_TO_CART(data);
+                this.ADD_TO_CART(data)
+                .then(() => {
+                    let timeStap = Date.now().toLocaleString();
+                    this.messages.unshift(
+                        {name: "Товар добавлен в корзину", id: timeStap}
+                    )
+                })
             },
             ...mapActions([
                 'GET_PRODUCTS_FROM_API',

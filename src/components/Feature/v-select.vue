@@ -6,7 +6,7 @@
         >{{selected}}</p>
         <div
                 class="options"
-                v-if="isOptionVisible"
+                v-if="isOptionVisible || IS_DESKTOP"
         >
             <p
                 v-for="option in options"
@@ -20,6 +20,9 @@
 </template>
 
 <script>
+
+    import {mapGetters} from 'vuex'
+
     export default {
         name: "v-select",
         props: {
@@ -33,6 +36,12 @@
                 type: String,
                 default() {
                     return '';
+                }
+            },
+            isExpanded: {
+                type: Boolean,
+                default(){
+                    return false;
                 }
             }
         },
@@ -52,6 +61,12 @@
             hideSelect(){
                 this.isOptionVisible = false;
             }
+        },
+        computed: {
+          ...mapGetters([
+              'IS_MOBILE',
+              'IS_DESKTOP'
+          ])
         },
         mounted() {
             document.addEventListener('click', this.hideSelect.bind(this), true)
