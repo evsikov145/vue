@@ -15,11 +15,13 @@
                 :users_data="USERS"
         />
         <vShow/>
+        <vCarousel/>
     </section>
 </template>
 
 <script>
     import {mapActions, mapGetters} from 'vuex'
+    import vCarousel from './v-carousel'
     import vTable from './v-table'
     import vSelect from './v-select'
     import vShow from './v-show'
@@ -28,7 +30,8 @@
         components: {
             vSelect,
             vTable,
-            vShow
+            vShow,
+            vCarousel
         },
         data(){
             return {

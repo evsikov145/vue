@@ -23,5 +23,7 @@
 </script>
 
 <style scoped>
-
+    .v-show {
+        margin-bottom: 40px;
+    }
 </style>
